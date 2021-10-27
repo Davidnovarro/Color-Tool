@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace GrayscaleMaker
+namespace ColorTool
 {
     static class Program
     {
@@ -17,7 +17,7 @@ namespace GrayscaleMaker
             Application.SetHighDpiMode(HighDpiMode.SystemAware);
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new ColorToolForm());
+            Application.Run(new MainForm());
         }
     }
 }

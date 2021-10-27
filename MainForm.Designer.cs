@@ -1,7 +1,7 @@
 ﻿
-namespace GrayscaleMaker
+namespace ColorTool
 {
-    partial class ColorToolForm
+    partial class MainForm
     {
         /// <summary>
         ///  Required designer variable.
@@ -29,11 +29,11 @@ namespace GrayscaleMaker
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ColorToolForm));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.CaptureButton = new System.Windows.Forms.Button();
             this.SaveButton = new System.Windows.Forms.Button();
-            this.FilterComboBox = new System.Windows.Forms.ComboBox();
-            this.colorFilterLabel = new System.Windows.Forms.Label();
+            this.FilterComboBox_1 = new System.Windows.Forms.ComboBox();
+            this.FilterComboBox_0 = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // CaptureButton
@@ -60,34 +60,37 @@ namespace GrayscaleMaker
             this.SaveButton.UseVisualStyleBackColor = true;
             this.SaveButton.Click += new System.EventHandler(this.OnSaveClick);
             // 
-            // FilterComboBox
+            // FilterComboBox_1
             // 
-            this.FilterComboBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.FilterComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.FilterComboBox.FormattingEnabled = true;
-            this.FilterComboBox.Location = new System.Drawing.Point(12, 415);
-            this.FilterComboBox.Name = "FilterComboBox";
-            this.FilterComboBox.Size = new System.Drawing.Size(172, 23);
-            this.FilterComboBox.TabIndex = 3;
-            this.FilterComboBox.SelectedIndexChanged += new System.EventHandler(this.FilterComboBoxChanged);
+            this.FilterComboBox_1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.FilterComboBox_1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.FilterComboBox_1.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.FilterComboBox_1.FormattingEnabled = true;
+            this.FilterComboBox_1.Location = new System.Drawing.Point(249, 407);
+            this.FilterComboBox_1.Name = "FilterComboBox_1";
+            this.FilterComboBox_1.Size = new System.Drawing.Size(231, 31);
+            this.FilterComboBox_1.TabIndex = 4;
+            this.FilterComboBox_1.SelectedIndexChanged += new System.EventHandler(this.OnFilter1_Changed);
             // 
-            // colorFilterLabel
+            // FilterComboBox_0
             // 
-            this.colorFilterLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.colorFilterLabel.AutoSize = true;
-            this.colorFilterLabel.Location = new System.Drawing.Point(12, 397);
-            this.colorFilterLabel.Name = "colorFilterLabel";
-            this.colorFilterLabel.Size = new System.Drawing.Size(65, 15);
-            this.colorFilterLabel.TabIndex = 4;
-            this.colorFilterLabel.Text = "Color Filter";
+            this.FilterComboBox_0.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.FilterComboBox_0.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.FilterComboBox_0.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.FilterComboBox_0.FormattingEnabled = true;
+            this.FilterComboBox_0.Location = new System.Drawing.Point(12, 407);
+            this.FilterComboBox_0.Name = "FilterComboBox_0";
+            this.FilterComboBox_0.Size = new System.Drawing.Size(231, 31);
+            this.FilterComboBox_0.TabIndex = 5;
+            this.FilterComboBox_0.SelectedIndexChanged += new System.EventHandler(this.OnFilter0_Changed);
             // 
             // ColorToolForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.colorFilterLabel);
-            this.Controls.Add(this.FilterComboBox);
+            this.Controls.Add(this.FilterComboBox_0);
+            this.Controls.Add(this.FilterComboBox_1);
             this.Controls.Add(this.SaveButton);
             this.Controls.Add(this.CaptureButton);
             this.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
@@ -95,7 +98,6 @@ namespace GrayscaleMaker
             this.Name = "ColorToolForm";
             this.Text = "Color Tool";
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -103,8 +105,8 @@ namespace GrayscaleMaker
 
         private System.Windows.Forms.Button CaptureButton;
         private System.Windows.Forms.Button SaveButton;
-        private System.Windows.Forms.ComboBox FilterComboBox;
-        private System.Windows.Forms.Label colorFilterLabel;
+        private System.Windows.Forms.ComboBox FilterComboBox_0;
+        private System.Windows.Forms.ComboBox FilterComboBox_1;
     }
 }
 
