@@ -47,6 +47,8 @@ namespace ColorTool
         public MainForm()
         {
             InitializeComponent();
+            this.KeyPreview = true;
+            this.KeyDown += OnKeyDown;
             this.AllowTransparency = true;
             Rectangle screenRectangle = this.RectangleToScreen(this.ClientRectangle);
             topPadding = screenRectangle.Top - this.Top;
@@ -148,5 +150,16 @@ namespace ColorTool
                 default: filter = new EmptyFilter(); break;
             }
         }
+
+
+        private void OnKeyDown(object sender, KeyEventArgs key)
+        {
+            if ((key.KeyCode & Keys.ControlKey) != 0)
+            {
+                OnCaptureClick(null, null);
+            }
+        }
+
+        private int ClampFilterIndex(int t) => t > Filters.Length ? 0 : t < 0 ? 0 : t;
     }
 }
