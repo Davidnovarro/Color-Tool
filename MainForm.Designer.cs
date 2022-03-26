@@ -84,7 +84,7 @@ namespace ColorTool
             this.FilterComboBox_0.TabIndex = 5;
             this.FilterComboBox_0.SelectedIndexChanged += new System.EventHandler(this.OnFilter0_Changed);
             // 
-            // ColorToolForm
+            // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -95,7 +95,7 @@ namespace ColorTool
             this.Controls.Add(this.CaptureButton);
             this.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "ColorToolForm";
+            this.Name = "MainForm";
             this.Text = "Color Tool";
             this.ResumeLayout(false);
 
